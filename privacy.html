@@ -6,23 +6,30 @@
   <title>PlanFin · Confidentialité / Privacy</title>
   <meta name="description" content="Politique de confidentialité de l'app PlanFin. Privacy policy of the PlanFin app.">
   <style>
-    :root { --navy:#163678; --accent:#F5C33C; --text:#1b1f24; --muted:#5a6270; --line:#e3e6ea; }
+    /* Couleurs de l'app PlanFin (Design.swift, Palette) : clair, puis sombre. */
+    :root { --accent:#1D2B3F; --encre:#131820; --fond:#FFFFFF; --muted:#5A6270; --line:#E3E6EA;
+            --s1:#2A78D6; --s2:#EB6834; --s3:#1BAF7A; --s4:#EDA100; --entete:#1D2B3F; --sur-entete:#FFFFFF; --lien:#2368C4; --marque:#7FB2F0; }
+    @media (prefers-color-scheme: dark) {
+      :root { --accent:#8FA9CE; --encre:#E9ECF1; --fond:#12161D; --muted:#9AA3B2; --line:#2A313C;
+              --s1:#3987E5; --s2:#D95926; --s3:#199E70; --s4:#C98500; --entete:#1D2B3F; --sur-entete:#E9ECF1; --lien:#3987E5; --marque:#7FB2F0; }
+    }
+    .bande { height:5px; background:linear-gradient(90deg, var(--s1) 0 25%, var(--s2) 25% 50%, var(--s3) 50% 75%, var(--s4) 75% 100%); }
     * { box-sizing:border-box; }
-    body { margin:0; background:#fff; color:var(--text); font:17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
-    header { background:var(--navy); color:#fff; padding:28px 16px; }
+    body { margin:0; background:var(--fond); color:var(--encre); font:17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+    header { background:var(--entete); color:var(--sur-entete); padding:28px 16px; }
     header .wrap { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
     .brand { font-weight:700; font-size:22px; letter-spacing:.02em; }
-    .brand span { color:var(--accent); }
-    nav a { color:#fff; text-decoration:none; border:1px solid var(--accent); border-radius:999px; padding:4px 14px; margin-left:6px; font-size:15px; }
+    .brand span { color:var(--marque); }
+    nav a { color:var(--sur-entete); text-decoration:none; border:1px solid var(--s1); border-radius:999px; padding:4px 14px; margin-left:6px; font-size:15px; }
     .wrap { max-width:720px; margin:0 auto; }
     main { padding:8px 16px 48px; }
     section { padding-top:24px; }
     section + section { border-top:1px solid var(--line); margin-top:32px; }
-    h1 { color:var(--navy); font-size:28px; line-height:1.2; margin:16px 0 4px; }
+    h1 { color:var(--accent); font-size:28px; line-height:1.2; margin:16px 0 4px; }
     .meta { color:var(--muted); font-size:15px; margin:0 0 8px; }
-    h2 { color:var(--navy); font-size:19px; margin:28px 0 6px; }
+    h2 { color:var(--accent); font-size:19px; margin:28px 0 6px; }
     p { margin:0 0 12px; }
-    a { color:#1f5fbf; }
+    a { color:var(--lien); }
     footer { color:var(--muted); font-size:14px; padding:0 16px 32px; }
   </style>
 </head>
@@ -33,6 +40,7 @@
       <nav><a href="#fr" lang="fr">Français</a><a href="#en" lang="en">English</a></nav>
     </div>
   </header>
+  <div class="bande" aria-hidden="true"></div>
   <main class="wrap">
     <section id="fr" lang="fr">
       <h1>Politique de confidentialité</h1>

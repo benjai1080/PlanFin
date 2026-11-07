@@ -5,16 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PlanFin · Soutien / Support</title>
   <style>
-    body { margin:0; background:#fff; color:#1b1f24; font:17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
-    header { background:#163678; color:#fff; padding:28px 16px; font-weight:700; font-size:22px; }
-    header span { color:#F5C33C; }
+    /* Couleurs de l'app PlanFin (Design.swift, Palette) : clair, puis sombre. */
+    :root { --accent:#1D2B3F; --encre:#131820; --fond:#FFFFFF; --muted:#5A6270; --line:#E3E6EA;
+            --s1:#2A78D6; --s2:#EB6834; --s3:#1BAF7A; --s4:#EDA100; --entete:#1D2B3F; --sur-entete:#FFFFFF; --lien:#2368C4; --marque:#7FB2F0; }
+    @media (prefers-color-scheme: dark) {
+      :root { --accent:#8FA9CE; --encre:#E9ECF1; --fond:#12161D; --muted:#9AA3B2; --line:#2A313C;
+              --s1:#3987E5; --s2:#D95926; --s3:#199E70; --s4:#C98500; --entete:#1D2B3F; --sur-entete:#E9ECF1; --lien:#3987E5; --marque:#7FB2F0; }
+    }
+    .bande { height:5px; background:linear-gradient(90deg, var(--s1) 0 25%, var(--s2) 25% 50%, var(--s3) 50% 75%, var(--s4) 75% 100%); }
+    body { margin:0; background:var(--fond); color:var(--encre); font:17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+    header { background:var(--entete); color:var(--sur-entete); padding:28px 16px; font-weight:700; font-size:22px; }
+    header span { color:var(--marque); }
     main { max-width:720px; margin:0 auto; padding:8px 16px 48px; }
-    h1 { color:#163678; font-size:26px; }
-    a { color:#1f5fbf; }
+    h1 { color:var(--accent); font-size:26px; }
+    a { color:var(--lien); }
   </style>
 </head>
 <body>
   <header><div style="max-width:720px;margin:0 auto">Plan<span>Fin</span></div></header>
+  <div class="bande" aria-hidden="true"></div>
   <main>
     <h1>Soutien · Support</h1>
     <p lang="fr">PlanFin permet de simuler la planification de la retraite selon les règles fiscales du Québec et du Canada, et de comparer les structures de rémunération des professionnels incorporés. Pour toute question, nous vous invitons à écrire à <a href="mailto:benjamin.calixte@gmail.com">benjamin.calixte@gmail.com</a>.</p>
